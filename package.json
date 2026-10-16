@@ -1,0 +1,124 @@
+{
+  "name": "@tingee/sdk-ui",
+  "version": "1.0.0-beta.1",
+  "description": "Bộ thư viện Tingee UI SDK chính thức cho Web Frontend (React, Next.js, Vue 3, Nuxt, Angular, JS/TS) — Tích hợp Liên kết Ngân hàng (Bank Link) & Cổng Thanh toán (Payment Gateway Checkout)",
+  "keywords": [
+    "tingee",
+    "tingee-sdk",
+    "tingee-sdk-ui",
+    "heno",
+    "baas",
+    "open-banking",
+    "bank-link",
+    "lien-ket-ngan-hang",
+    "payment-gateway",
+    "cong-thanh-toan",
+    "checkout",
+    "vietqr",
+    "pay-by-bank",
+    "virtual-account",
+    "react",
+    "nextjs",
+    "vue",
+    "nuxt",
+    "angular",
+    "typescript",
+    "sdk",
+    "ui-sdk"
+  ],
+  "homepage": "https://developers.tingee.vn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tingeehub/sdk-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tingeehub/sdk-ui/issues"
+  },
+  "license": "MIT",
+  "author": "TINGEE by HENO <developer@heno.vn> (https://tingee.vn)",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": {
+        "import": "./dist/react.d.ts",
+        "require": "./dist/react.d.cts"
+      },
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./vue": {
+      "types": {
+        "import": "./dist/vue.d.ts",
+        "require": "./dist/vue.d.cts"
+      },
+      "import": "./dist/vue.js",
+      "require": "./dist/vue.cjs"
+    },
+    "./angular": {
+      "types": {
+        "import": "./dist/angular.d.ts",
+        "require": "./dist/angular.d.cts"
+      },
+      "import": "./dist/angular.js",
+      "require": "./dist/angular.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=14.0.0",
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build",
+    "publish:beta": "npm publish --tag beta --access public",
+    "publish:latest": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "jsdom": "^25.0.0",
+    "react": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5",
+    "vue": "^3.5.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
