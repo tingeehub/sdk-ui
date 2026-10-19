@@ -1,6 +1,6 @@
 {
   "name": "@tingee/sdk-ui",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "description": "Bộ thư viện Tingee UI SDK chính thức cho Web Frontend (React, Next.js, Vue 3, Nuxt, Angular, JS/TS) — Tích hợp Liên kết Ngân hàng (Bank Link) & Cổng Thanh toán (Payment Gateway Checkout)",
   "keywords": [
     "tingee",
@@ -79,6 +79,7 @@
   "files": [
     "dist",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "peerDependencies": {
